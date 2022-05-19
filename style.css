@@ -1,4 +1,177 @@
 html, body {
+
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #85F6B8 0%, rgba(142, 217, 235, 0.85) 99.84%);
+  background-blend-mode: darken;
+
 }
+
+/* partie presentation du quiz */
+.display,
+.quiz,
+.success_party
+{
+
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  left:  410px;
+  top: 40px;
+  background: #ffff;
+
+}
+
+/* priorité d'affichage de container */
+
+
+.display{
+
+  z-index: 3;
+}
+.quiz{
+  z-index: 2;
+
+}
+.success_party{
+
+  z-index: 1;
+}
+.containt, .title {
+
+  margin: 10px;
+}
+.title{
+
+  margin-top: 20px;
+}
+
+.submit{
+text-align: center;
+position: relative;
+top: 30px;
+
+}
+.submit .btn{
+
+  width: 180px;
+  font-size: 20px;
+}
+
+.title{
+  text-align: center;
+}
+
+.breifing{
+
+  font-size: 20px;
+  margin: 20px;
+  text-align: center;
+  color:#555555 ;
+  line-height: 20px;
+  font-family: 'Inter';
+
+}
+
+/* partie du questionnaire */
+
+.questions{
+
+  margin: 30px ;
+  font-weight: 400;
+  font-family: 'Inter';
+  font-size: 18px;
+  text-align: center;
+  color: #555555;
+
+}
+
+.time_question , .check_answer , .exit_next{
+
+  margin: 10px;
+}
+
+.count_question{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: #555555;
+  font-size: 14px;
+}
+.form_check{
+
+  margin: 30px 0;
+  height: 35px;
+  align-content: center;
+}
+.answer{
+  padding-top: 5px;
+}
+.form_check  .answer, label{
+  padding-left: 10px; 
+}
+.exit_next{
+
+  display: flex;
+  justify-content: space-between;
+}
+.exit_next > button{
+
+  width: 160px;
+
+}
+.exit_next .exit{
+
+  background: #EC880C;;
+  border: none;
+}
+
+/* partie reussite */
+
+.success_party > .container{
+
+   align-content: center;
+   margin-top: 40px;
+
+   height: 400px;
+
+
+}
+
+.name_winner, 
+.email_winner,
+.icon,
+.count_page_succed, 
+.accueil{
+  margin: 20px;
+  text-align: center;
+
+}
+.name_winner{
+   
+  font-size: 30px;
+  font-family: 'Inter';
+  
+}
+.email_winner{
+  font-family: 'Inter';
+}
+.icon {
+text-align: center;
+
+}
+
+.accueil > button{
+
+  width: 160px;
+
+}
+.icon , .count_page_succed{
+
+  margin-top: 50px;
+}
+
+
+  

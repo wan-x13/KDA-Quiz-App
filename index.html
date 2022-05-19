@@ -4,12 +4,195 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Quiz-App</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  
 </head>
 
 <body>
-  Hello world
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz App</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+  rel="stylesheet"
+   integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+   crossorigin="anonymous">
+</head>
+
+<body>
+ <div class="card">
+   <div class="display card-body presentation" id="presentation">
+
+     <h1 class="title fs-4">Javascript Quiz</h1>
+     <p class="breifing text-sm ">
+      Évaluez vos connaissances en JavaScript en répondant aux questions que nous avons spécialement sélectionnées pour vous.
+      C'est fun et c'est gratuit. 
+     </p>
+     <form action="">
+
+      <div class="containt">
+        <label for="name" class="form-label">Nom</label>
+       <input type="text"  id="name" class="name form-control rounded-0 " name="name" placeholder="Name">
+
+
+      </div>
+
+      <div class="containt">
+        <label for="email" class="form-label">Email</label>
+       <input type="email" id="email" class=" email form-control rounded-0" placeholder="example@example.com" name="email">
+
+
+      </div>
+      <div class="submit">
+        <buttton id="start"  class="btn btn-success rounded-0 shadow">commencer</buttton>
+
+
+      </div>
+
+     
+       
+       
+     </form>
+
+
+   </div>  
+
+   <div class="card-body quiz" id="quiz">
+
+     <div class="questions">
+       Quel est le type d'un fichier javascript ?
+       </div>
+
+       <!-- time question party -->
+
+     <div class="time_question">
+
+         <div class="count_question">
+
+         <div class="questionCountNumber"> Question <span>1/15 </span></div>
+          <div class="time">60</div>
+
+       </div>
+      
+     
+
+     </div>
+<!-- partie check answer -->
+
+     <div class="check_answer">
+
+       <div class="form_check border rounded">
+
+         <div class="answer">
+
+         <input type="radio" class="form-check-input" value="" id="response1">
+         <label for="response1" class="form-check-label">.ts</label>
+
+         </div>
+
+       </div>
+
+       <div class="form_check border rounded">
+         <div  class="answer">
+          <input type="radio" class="form-check-input" value="" id="response2">
+          <label for="response2" class="form-check-label">.jsx</label>
+
+         </div>
+     
+       </div>
+       <div class="form_check border  rounded">
+
+         <div class="answer">
+          <input type="radio" class="form-check-input" value="" id="response3">
+          <label for="response3" class="form-check-label">.js</label>
+
+         </div>
+      
+        </div>
+        <div class="form_check  border rounded">
+
+         <div class="answer">
+          <input type="radio" class="form-check-input" value="" id="response4">
+          <label for="response4" class="form-check-label">.j</label>
+
+         </div>
+      
+         </div>
+
+
+      </div>
+      <!-- fin check Answer -->
+
+
+      <!-- Exit or Next party  -->
+
+         <div class="exit_next">
+            <button class="exit  text-light fw-bold rounded-0 shadow">Quitter</button>
+           <button class="next btn btn-success text-light fw-bold rounded-0 shadow" id="next">Suivant</button>
+
+
+         </div>
+         
+         <!-- Fin Exit or Next party-->
+     
+   </div>
+
+
+   <!-- success party  -->
+
+   <div class="success_party" id="successParty">
+
+     <div class="container">
+
+      <div  class="name_winner ">
+        David
+      </div>
+      <div class="email_winner">
+        davidwangajean@gmail.com
+      </div>
+      <div class="icon">
+
+  
+       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#028A3D" class="bi bi-check-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+      </svg>
+
+
+      </div>
+
+
+      <div class="count_page_succed">14/15</div>
+
+
+      <div class="accueil">
+        
+        <button class="btn btn-primary rounded-0 shadow">Accueil</button>
+      </div>
+
+
+     </div >
+     <!-- END CONTAINER SUCCED -->
+   </div>
+
+
+
+
+
+ </div>
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+   crossorigin="anonymous"></script>
+</body>
+
+</html>
   <script src="script.js"></script>
 </body>
 
