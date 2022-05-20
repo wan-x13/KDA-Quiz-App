@@ -108,13 +108,13 @@ function optionChoose(answer){
 
     // Récuperation de la reponse de l'utilisateur
     let userAnswer = answer.textContent;
-    console.log(userAnswer);
+ 
     let correctAnswer = questions[countQuestion].answer;
     let answerValue = document.querySelectorAll('.answer > .form-check-input') ;
   
 
     let element = answerValue.children;
-    console.log(element);
+ 
     const allOptions = checkAnswer.querySelectorAll(".form-check .answer > input , label");
  
 
