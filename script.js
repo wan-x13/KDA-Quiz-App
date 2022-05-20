@@ -75,16 +75,16 @@ nextButton.addEventListener('click', function(){
 function showQuestions(index){
 
     let questionTag = "<span>" + questions[index].question + "</span>";
-    let optionTag  = '<div class="form_check border  rounded"><div class="answer">'+questions[index].idInput[0] + '<label for="response1" class="form-check-label">' 
+    let optionTag  = '<div class= "form-check border rounded"><div class="answer">'+questions[index].idInput[0] + '<label for="response1" class="form-check-label">' 
     + questions[index].options[0] +'</label></div></div>'
 
-    +'<div class="form_check border  rounded"><div class="answer">'+questions[index].idInput[1] + '<label for="response2" class="form-check-label">' 
+    +'<div class="form-check border  rounded"><div class="answer">'+questions[index].idInput[1] + '<label for="response2" class="form-check-label">' 
     + questions[index].options[1] +'</label></div></div>'
 
-    +'<div class="form_check border  rounded"><div class="answer">'+questions[index].idInput[2] + '<label for="response3" class="form-check-label">' 
+    +'<div class="form-check border  rounded"><div class="answer">'+questions[index].idInput[2] + '<label for="response3" class="form-check-label">' 
     + questions[index].options[2] +'</label></div></div>'
 
-    +'<div class="form_check border  rounded"><div class="answer">'+questions[index].idInput[3] + '<label for="response4" class="form-check-label">' 
+    +'<div class="form-check border  rounded"><div class="answer">'+questions[index].idInput[3] + '<label for="response4" class="form-check-label">' 
     + questions[index].options[3] +'</label></div></div>';
 
 
@@ -103,37 +103,45 @@ function showQuestions(index){
 }
 
 
-function optionChoose(ans){
+function optionChoose(answer){
 
 
     // Récuperation de la reponse de l'utilisateur
-    let userAnswer = 0;
+    let userAnswer = answer.textContent;
+    console.log(userAnswer);
     let correctAnswer = questions[countQuestion].answer;
     let answerValue = document.querySelectorAll('.answer > .form-check-input') ;
+  
+
     let element = answerValue.children;
+    console.log(element);
+    const allOptions = checkAnswer.querySelectorAll(".form-check .answer > input , label");
+ 
 
-    console.log(answerValue);
-    for (let i = 0; i<answerValue.length; i++){
 
-        //  if(inputs[i].checked === true) break;
-         userAnswer += answerValue[i].innerText;
+    // for (let i = 0; i<answerValue.length; i++){
 
-    }
-  console.log(userAnswer);
+    //     //  if(inputs[i].checked === true) break;
+    //      userAnswer += answerValue[i].innerText;
 
-    let allItems = checkAnswer.children;
-    console.log(allItems);
+    // }
+//   console.log(userAnswer);
+
+    // let allItems = checkAnswer.children;
+    // console.log(allItems);
 
 
     if(userAnswer == correctAnswer){
 
         userScore += 1;
     }
-
-    for(let i= 0; i<allItems ; i++){
-
-        allItems.children[i].disabled = true;
+    else
+    {
+        userScore = 0
     }
+    
+
+   for(let i = 0; i<allOptions.length; i++) allOptions[i].disabled = true;
     
     nextButton.disabled = false;
 
