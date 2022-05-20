@@ -1,10 +1,20 @@
+// 
+
+
+
 let questions = [
 
     {
 
         numb : 1,
-        question : "Quel est l'extension d'un fichier javascript?" ,
-        answer : ".js" ,
+        question : "Quel est l'extension d'un fichier javascript ?" ,
+        answer : 4 ,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value='1' id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value='2' id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value='3' id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value='4' id='response4'>",
+        ],
         options : [
             ".ts",
             ".jsx",
@@ -16,8 +26,14 @@ let questions = [
     {
 
         numb : 2,
-        question : "Quel est le moteur javascript pour google chrome?" ,
-        answer : "V8 javascript engine" ,
+        question : "Quel est le moteur javascript pour google chrome ?" ,
+        answer : 3,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value='1' id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value='2' id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value='3' id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value='4' id='response4'>",
+        ],
         options : [
             " V12 javascript engine",
             "Chakra javascript Engine",
@@ -29,8 +45,14 @@ let questions = [
     {
 
         numb : 3,
-        question : "Comment déclare t-on une fonction?" ,
-        answer : "function mafonction(x){...}" ,
+        question : "Comment déclare t-on une fonction ?" ,
+        answer : 4,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "def __init__{...}",
             "def ma_fonction(){...}",
@@ -42,8 +64,14 @@ let questions = [
     {
 
         numb : 4,
-        question : "Comment déclare t-on une variable?" ,
-        answer : "let maVar" ,
+        question : "Comment déclare t-on une variable ?" ,
+        answer :3 ,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "int idStudent = 3",
             "string maVar = 'david' ",
@@ -55,13 +83,19 @@ let questions = [
     {
 
         numb : 5,
-        question : "Comment créer un objet en javascript?" ,
-        answer : "let personne = {...}" ,
+        question : "Comment créer un objet en javascript ?" ,
+        answer : 2,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
-            "int idStudent = 3",
-            "string maVar = 'david' ",
+            "int personne  = {...........}",
+            "let personne = {.......} ",
             "let maVar",
-            "$maVar"
+            "string mouve"
 
         ]
     },
@@ -69,7 +103,13 @@ let questions = [
 
         numb : 6,
         question : " Laquelle de librairie suivante n'est pas du javascript" ,
-        answer : "springBoot" ,
+        answer :4 ,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "Vuejs",
             "nextjs",
@@ -82,7 +122,13 @@ let questions = [
 
         numb : 7,
         question : "Parmi les avantages de javascript suivant suivant l'un est faux " ,
-        answer : "Javascript est dépendant de la plateforme" ,
+        answer : 3,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "Javascript est un langage coté client",
             "Javascript est un langage facile à apprendre",
@@ -94,8 +140,14 @@ let questions = [
     {
 
         numb : 8,
-        question : "Qu'est ce que le DOM?" ,
-        answer : "document objet model" ,
+        question : "Qu'est ce que le DOM ?" ,
+        answer : 4,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "département d'outre mer",
             "document d'ordre maritime",
@@ -107,8 +159,14 @@ let questions = [
     {
 
         numb : 9,
-        question : "A quoi sert le mot clé this? " ,
-        answer : "le mot-clé « this » fait  réference à l'objet actuelle" ,
+        question : "A quoi sert le mot clé this ? " ,
+        answer : 4 ,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "le mot-clé « this » fait réference à la fonction",
             "le mot-clé « this » fait réference au DOM ",
@@ -120,8 +178,14 @@ let questions = [
     {
 
         numb : 10,
-        question : "Comment trouvez-vous le nombre avec la plus grande valeur de « a » et « b »?" ,
-        answer : "Math.max(a,b)" ,
+        question : "Comment trouvez-vous le nombre avec la plus grande valeur de « a » et « b » ?" ,
+        answer : 2,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "Math.ceil(a, b)",
             "Math.max(a, b)",
@@ -134,8 +198,14 @@ let questions = [
     {
 
         numb : 11,
-        question : "Comment arrondir le nombre 3.12 à un nombre entier plus proche?" ,
-        answer : "Math.round(3.12)" ,
+        question : "Comment arrondir le nombre 3.12 à un nombre entier plus proche ?" ,
+        answer :1 ,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
             "Math.round(3.12)",
             "Math.rnd(3.12)",
@@ -148,59 +218,20 @@ let questions = [
 
         numb : 12,
         question : "Quelle est la syntaxe correcte de la boucle while?" ,
-        answer : "while(x <= 5)" ,
+        answer : 4 ,
+        idInput : [
+            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
+            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+        ],
         options : [
-            " while i = 1 to 5;",
+            "while i = 1 to 5;",
             "while i <= 5; i++;",
             "while (i = 0; i<=5; i++);",
             "while(x<=5);"
 
         ]
     },
-    {
 
-        numb : 13,
-        question : "Que renvoie la question suivante isNaN(‘222’)?" ,
-        answer : "false" ,
-        options : [
-            "true",
-            "false",
-          
-
-        ]
-    },
-    {
-
-        numb : 14,
-        question : "Donnez la valeur attendu de l'opération suivante (true | | false) &&( !true)" ,
-        answer : "false" ,
-        options : [
-            "true",
-            "false",
-          
-
-        ]
-    },
-    {
-
-        numb : 15,
-        question : "javascript est un langage fortement typé typé Vrai ou Faux?" ,
-        answer : "Faux" ,
-        options : [
-            "Vrai",
-            "Faux",
-          
-
-        ]
-    },
-
-
-    
-    
-    
-
-
-
-
-
-]
+];
