@@ -1,29 +1,23 @@
 
 
+const displayStart = document.querySelector("#presentation");
+const startQuiz = document.querySelector("#start");
+const quizInfo = document.querySelector("#quiz");
+const successParty = document.querySelector("#successParty");
+const nextButton = document.querySelector('#next');
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const questionZone = document.querySelector("#questions");
+const checkAnswer = document.querySelector("#checkAnswer");
+const timeCount =document.querySelector("#timeCount");
+const progress = document.querySelector("#myBar");
+const userNameZone = document.querySelector(".name_user");
+const emailZone = document.querySelector(".email_user");
+const homePageButton = document.querySelector(".accueil > .btn"); 
+const exitButton = document.querySelector(".exit_next > .exit ");
+const questionCountNumber = document.querySelector(".questionCountNumber");
+const countPageSucced = document.querySelector(".count_page_succed");
 
-/***
- * 
- * 
- * 
- * 
- * FIN DU TABLEAU
- * 
- * 
- * 
- * 
- */
-
-// 
-
-let displayStart = document.querySelector("#presentation");
-let startQuiz = document.querySelector("#start");
-let quizInfo = document.querySelector("#quiz");
-let successParty = document.querySelector("#successParty");
-let nextButton = document.querySelector('#next');
-let nameInput = document.querySelector("#name");
-let emailInput = document.querySelector("#email");
-let questionZone = document.querySelector("#questions");
-let checkAnswer = document.querySelector("#checkAnswer");
 
 
 
@@ -32,8 +26,13 @@ let timeValue = 60;
 let countQuestion = 0;
 let questionNumber = 1;
 let userScore = 0;
+let counterTime ;
+let widthValue = 100;
+let numberPerQuestionSucced = 0;
 
-let nameUser;
+
+
+let userName;
 let emailUser;
 
 
@@ -41,12 +40,13 @@ const forms = document.querySelector(".needs-validation");
 
 startQuiz.addEventListener('click', function(){
 
-    nameUser = nameInput.value;
+    userName = nameInput.value;
+    console.log(userName);
     emailUser = emailInput.value;
-    
-
-    showQuestions(0);
+    getQuestions(0);
+    setTime(timeValue);
     displayStart.hidden = true;
+    quizInfo.hidden = false;
     
     nextButton.disabled = true;
 
@@ -59,22 +59,49 @@ nextButton.addEventListener('click', function(){
  if(countQuestion < questions.length-1){
 
     countQuestion++;
-    showQuestions(countQuestion);
+    questionNumber++;
+    getQuestions(countQuestion);
+    setQuestionCounter(questionNumber);
+    clearInterval(counterTime);
+    timeCount.removeAttribute("style");
+    setTime(timeValue);
+    progressCount(widthValue);
     nextButton.disabled = true;
+ 
+
  }
  else{
 
-   quizInfo.hidden = true;
-   displayStart.hidden = true;
+   getResult();
  }
+});
+
+
+homePageButton.addEventListener('click' , function(){
+
+
+    successParty.hidden = true;
+    displayStart.hidden = false;
+
+    userScore = 0;
+    timeValue = 60;
+    clearInterval(counterTime);
+    getQuestions(countQuestion);
+    setQuestionCounter(timeValue);
+
+   
+});
+
+exitButton.addEventListener('click', function(){
+
+ getResult();
+
 })
 
 
+function getQuestions(index){
 
-
-function showQuestions(index){
-
-    let questionTag = "<span>" + questions[index].question + "</span>";
+    let questionTag = questions[index].question ;
     let optionTag  = '<div class= "form-check border rounded"><div class="answer">'+questions[index].idInput[0] + '<label for="response1" class="form-check-label">' 
     + questions[index].options[0] +'</label></div></div>'
 
@@ -96,48 +123,43 @@ function showQuestions(index){
 
     for(let i = 0; i<inputs.length; i++){
 
-        inputs[i].setAttribute("onchange", "optionChoose(this)");
+        inputs[i].setAttribute("onchange", "getOption(this)");
     }
 
  
 }
 
 
-function optionChoose(answer){
+function getOption(answer){
 
 
     // Récuperation de la reponse de l'utilisateur
-    let userAnswer = answer.textContent;
+   
  
     let correctAnswer = questions[countQuestion].answer;
-    let answerValue = document.querySelectorAll('.answer > .form-check-input') ;
-  
-
-    let element = answerValue.children;
+   
  
     const allOptions = checkAnswer.querySelectorAll(".form-check .answer > input , label");
- 
+    const allInputs = checkAnswer.querySelectorAll(".form-check .answer > input[name='reponse'] ");
 
+    for(const element of allInputs){
 
-    // for (let i = 0; i<answerValue.length; i++){
+        if(element.checked){
 
-    //     //  if(inputs[i].checked === true) break;
-    //      userAnswer += answerValue[i].innerText;
+            userAnswer = element.value;
+      
+            break;
+        }
+    }
+    userAnswer = parseInt(userAnswer);
 
-    // }
-//   console.log(userAnswer);
-
-    // let allItems = checkAnswer.children;
-    // console.log(allItems);
 
 
     if(userAnswer == correctAnswer){
 
         userScore += 1;
-    }
-    else
-    {
-        userScore = 0
+        numberPerQuestionSucced += 1;
+ 
     }
     
 
@@ -148,3 +170,81 @@ function optionChoose(answer){
 
 }
 
+// setTime function
+
+function setTime(time){
+
+    const allOptions = checkAnswer.querySelectorAll(".form-check .answer > input , label");
+
+    counterTime = setInterval(()=>{
+
+    timeCount.innerText = time;
+    time--;
+    if(time < 10){
+
+        timeCount.innerText = "0" + time;
+
+    }    
+    if(time <= 0){
+        timeCount.innerText = "Time off";
+        timeCount.style.color = "red";
+        for(let i = 0; i<allOptions.length; i++) allOptions[i].disabled = true;
+        nextButton.disabled = false;
+    }
+    
+    
+   
+
+   }, 1000)
+}
+
+function progressCount(time){
+
+    const id = setInterval(()=>{
+
+        time--;
+        progress.style.width = time + "%";
+
+    }, 1000)
+}
+
+
+let iconFalse = "<i class='fas fa-times'></i>";
+
+function getResult(){
+
+
+  displayStart.hidden = true;
+  quizInfo.hidden = true;
+
+  const iconZone = document.querySelector(".icon");
+  userNameZone.innerText= userName;
+  emailZone.innerText= emailUser;
+  countPageSucced.innerText = numberPerQuestionSucced + "/15";
+ 
+
+
+  if(userScore < 8){
+    
+    iconZone.innerHTML = iconFalse;
+
+
+  }
+  else{
+
+    const svgImg = document.createElement("img");
+    svgImg.src = "check-circle.svg";
+    iconZone.appendChild(svgImg);
+  }
+
+}
+
+// function question compteur
+
+function setQuestionCounter(index){
+
+
+    let numberPerQuestion = index + "/" + questions.length;
+
+    questionCountNumber.innerText = numberPerQuestion;
+}

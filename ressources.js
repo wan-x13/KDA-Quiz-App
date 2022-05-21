@@ -7,7 +7,7 @@ let questions = [
     {
 
         numb : 1,
-        question : "Quel est l'extension d'un fichier javascript ?" ,
+        question : "Quel est le type d'un fichier javascript ?" ,
         answer : 4 ,
         idInput : [
             "<input type='radio' name='reponse' class='form-check-input' value='1' id='response1'>",
@@ -18,7 +18,7 @@ let questions = [
         options : [
             ".ts",
             ".jsx",
-            ".js",
+            ".json",
             ".js"
 
         ]

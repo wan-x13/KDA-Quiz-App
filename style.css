@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,700&display=swap');
+
+
 html, body {
 
   height: 100%;
@@ -77,32 +80,79 @@ top: 30px;
 
 /* partie du questionnaire */
 
+.quiz{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+ 
+}
 .questions{
 
-  margin: 30px ;
-  font-weight: 400;
-  font-family: 'Inter';
-  font-size: 18px;
-  text-align: center;
-  color: #555555;
+  height: 60px;
+
+}
+.time_question{
+ height: 80px;
+
+
+
+}
+.check_answer{
+  flex: auto;
+
+}
+.exit_next{
+
+  height: 80px;
 
 }
 
-.time_question , .check_answer , .exit_next{
 
-  margin: 10px;
+.questions{
+  font-weight: 400;
+  font-family: 'Inter';
+  font-size: 15px;
+  text-align: center;
+  color: #555555;
+  padding-top: 20px;
+
+
+}
+
+.questions, .time_question , .check_answer , .exit_next{
+
+
+  border: 1px solid #555555;
+  margin: 10px 0;
+  width: 350px;
+
+  
+
+}
+.progressBar{
+
+  background: #cecece;
+}
+.progressBar > #myBar{
+
+  background: #50f105;
+  height: 5px;
 }
 
 .count_question{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin: 10px 0;
   color: #555555;
   font-size: 14px;
+  background-color: #85F6B8;
+
 }
 .form-check{
 
-  margin: 30px 0;
+  margin: 15px 0 ;
   height: 35px;
   align-content: center;
 }
@@ -114,12 +164,18 @@ top: 30px;
 }
 .exit_next{
 
+
+  border: 1px solid #555555;
+
   display: flex;
   justify-content: space-between;
 }
 .exit_next > button{
 
   width: 160px;
+  height: 40px;
+  align-items: center;
+  align-content: center;
 
 }
 .exit_next .exit{
@@ -132,45 +188,54 @@ top: 30px;
 
 .success_party > .container{
 
+   display:  flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
    align-content: center;
-   margin-top: 40px;
+   height: 500px;
+   gap: 10px;
+   padding-top: 50px;
 
-   height: 400px;
 
+}
+
+.name_user, .email_user, .count_page_succed,.icon, .accueil{
+width: 300px;
 
 }
 
-.name_winner, 
-.email_winner,
-.icon,
-.count_page_succed, 
-.accueil{
-  margin: 20px;
-  text-align: center;
+.icon{
+
+  height: 170px;
 
 }
-.name_winner{
+.icon > img{
+
+  padding-top: 20px;
+}
+.name_user{
    
   font-size: 30px;
   font-family: 'Inter';
+  height: 40px;
   
 }
-.email_winner{
+.email_user{
   font-family: 'Inter';
+  height: 20px;
 }
-.icon {
-text-align: center;
 
-}
 
 .accueil > button{
 
   width: 160px;
 
+
 }
 .icon , .count_page_succed{
 
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 
