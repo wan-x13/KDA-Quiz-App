@@ -10,13 +10,13 @@ const emailInput = document.querySelector("#email");
 const questionZone = document.querySelector("#questions");
 const checkAnswer = document.querySelector("#checkAnswer");
 const timeCount =document.querySelector("#timeCount");
-const progress = document.querySelector("#myBar");
 const userNameZone = document.querySelector(".name_user");
 const emailZone = document.querySelector(".email_user");
 const homePageButton = document.querySelector(".accueil > .btn"); 
 const exitButton = document.querySelector(".exit_next > .exit ");
 const questionCountNumber = document.querySelector(".questionCountNumber");
 const countPageSucced = document.querySelector(".count_page_succed");
+const progress = document.querySelector("#progressBar");
 
 
 
@@ -27,7 +27,9 @@ let countQuestion = 0;
 let questionNumber = 1;
 let userScore = 0;
 let counterTime ;
-let widthValue = 100;
+let idProgress;
+
+
 let numberPerQuestionSucced = 0;
 
 
@@ -45,6 +47,7 @@ startQuiz.addEventListener('click', function(){
     emailUser = emailInput.value;
     getQuestions(0);
     setTime(timeValue);
+    setUpdateProgress();
     displayStart.hidden = true;
     quizInfo.hidden = false;
     
@@ -65,7 +68,7 @@ nextButton.addEventListener('click', function(){
     clearInterval(counterTime);
     timeCount.removeAttribute("style");
     setTime(timeValue);
-    progressCount(widthValue);
+    setUpdateProgress();
     nextButton.disabled = true;
  
 
@@ -82,7 +85,6 @@ homePageButton.addEventListener('click' , function(){
 
     successParty.hidden = true;
     displayStart.hidden = false;
-
     userScore = 0;
     timeValue = 60;
     clearInterval(counterTime);
@@ -198,14 +200,32 @@ function setTime(time){
    }, 1000)
 }
 
-function progressCount(time){
+let i = 0;
+function setUpdateProgress(){
 
-    const id = setInterval(()=>{
+  if(i == 0){
+    
+    i = 1;
+    let widthProgress = 120;
+   
+    idProgress = setInterval(()=>{
 
-        time--;
-        progress.style.width = time + "%";
-
-    }, 1000)
+        if( widthProgress<= 0){
+  
+          clearInterval(idProgress);
+          i = 0;
+        }
+        else {
+  
+          widthProgress--;
+          progress.style.width = widthProgress + "%";
+        }
+  
+      }, 500)
+   
+  }
+   
+   
 }
 
 

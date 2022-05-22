@@ -124,22 +124,14 @@ top: 30px;
 .questions, .time_question , .check_answer , .exit_next{
 
 
-  border: 1px solid #555555;
+
   margin: 10px 0;
   width: 350px;
 
   
 
 }
-.progressBar{
 
-  background: #cecece;
-}
-.progressBar > #myBar{
-
-  background: #50f105;
-  height: 5px;
-}
 
 .count_question{
   display: flex;
@@ -147,7 +139,7 @@ top: 30px;
   margin: 10px 0;
   color: #555555;
   font-size: 14px;
-  background-color: #85F6B8;
+
 
 }
 .form-check{
@@ -165,7 +157,7 @@ top: 30px;
 .exit_next{
 
 
-  border: 1px solid #555555;
+
 
   display: flex;
   justify-content: space-between;
