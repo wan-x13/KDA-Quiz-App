@@ -10,42 +10,65 @@ html, body {
   background: linear-gradient(90deg, #85F6B8 0%, rgba(142, 217, 235, 0.85) 99.84%);
   background-blend-mode: darken;
 
+
+ 
+
+}
+
+.card-principal{
+ height: 100%;
+ width: 100%;
+ display: grid;
+ align-items: center;
+ justify-items: center;
+ 
+
+
 }
 
 /* partie presentation du quiz */
-.display,
+.presentation,
 .quiz,
 .success_party
 {
 
-  position: absolute;
+
   width: 400px;
   height: 500px;
-  left:  410px;
-  top: 40px;
+   /* left:  410px;  */
+
   background: #ffff;
 
-}
 
+}
 /* priorité d'affichage de container */
 
 
-.display{
-
-  z-index: 3;
-}
-.quiz{
-  z-index: 2;
+.card-principal .quiz{
+  /* z-index: 2; */
+display: none;
 
 }
-.success_party{
+.card-principal .success_party{
 
-  z-index: 1;
+  /* z-index: 1; */
+display: none;
 }
+
+.card-principal .presentation{
+
+  display: flex;
+  flex-direction: column;
+
+   
+  }
+
 .containt, .title {
 
-  margin: 10px;
+  margin:  10px;
+
 }
+
 .title{
 
   margin-top: 20px;
@@ -65,18 +88,35 @@ top: 30px;
 
 .title{
   text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+
 }
 
 .breifing{
 
-  font-size: 20px;
+  font-size: 15px;
   margin: 20px;
   text-align: center;
   color:#555555 ;
   line-height: 20px;
   font-family: 'Inter';
+ 
 
 }
+
+.containt > .invalid{
+  border:  1px solid #FF3838;
+
+}
+.containt > .msg{
+
+  color: #FF3838;
+  font-size: 15px;
+  padding: 10px;
+
+}
+
 
 /* partie du questionnaire */
 
@@ -91,6 +131,7 @@ top: 30px;
 .questions{
 
   height: 60px;
+
 
 }
 .time_question{
@@ -108,8 +149,6 @@ top: 30px;
   height: 80px;
 
 }
-
-
 .questions{
   font-weight: 400;
   font-family: 'Inter';
@@ -117,21 +156,11 @@ top: 30px;
   text-align: center;
   color: #555555;
   padding-top: 20px;
-
-
 }
-
 .questions, .time_question , .check_answer , .exit_next{
-
-
-
   margin: 10px 0;
   width: 350px;
-
-  
-
 }
-
 
 .count_question{
   display: flex;
@@ -139,8 +168,6 @@ top: 30px;
   margin: 10px 0;
   color: #555555;
   font-size: 14px;
-
-
 }
 .form-check{
 
@@ -154,11 +181,18 @@ top: 30px;
 .form-check  .answer, label{
   padding-left: 10px; 
 }
+
+.form-check:hover{
+
+  border: 1px solid #028A3D;
+}
+label{
+
+  font-size: 15px;
+  font-family: 'Inter';
+  color: #555555;
+}
 .exit_next{
-
-
-
-
   display: flex;
   justify-content: space-between;
 }
@@ -168,13 +202,15 @@ top: 30px;
   height: 40px;
   align-items: center;
   align-content: center;
-
 }
 .exit_next .exit{
 
   background: #EC880C;;
   border: none;
 }
+
+
+
 
 /* partie reussite */
 
@@ -206,6 +242,27 @@ width: 300px;
 
   padding-top: 20px;
 }
+svg{
+
+ padding: 20px 40px;
+ width: 200px;
+}
+circle{
+ 
+  
+  fill: none;
+  stroke: #FF3838;
+  stroke-width: 10px;
+  transform: translate(5px, 5px);
+
+
+}
+.line1 , .line2{
+
+  stroke: #FF3838;
+  stroke-width: 10px;
+  transform: translate(12px,12px);
+}
 .name_user{
    
   font-size: 30px;
@@ -231,4 +288,69 @@ width: 300px;
 }
 
 
+@media only screen and (max-width: 500px){
+	/*Big smartphones [426px -> 600px]*/
+
+  .card-principal{
+
+    background: #ffff;
+  }
+
+.presentation,
+.quiz,
+.success_party
+{
+  width: 100%;
+  height: 100%;
+   /* left:  410px;  */
+}
+.breifing{
+
+  margin-top: 30px;
+  font-size: 25px;
+  line-height: 25px;
+  position: relative;
+  top: 30px;
+}
+
+.title{
+
+  height: 60px;
+  font-size: 40px;
+  position: relative;
+  top: 30px;
+  
+}
+.breifing{
+
+  height: 220px;
+  padding-top: 20px;
+  letter-spacing: 2px;
+}
+.containt{
+
+  height: 80px;
+}
+.containt, .title{
+  margin-top: 20px;
+}
+.containt > input{
+
+  height : 50px;
+}
+.containt > label{
+
+  font-size: 20px;
+}
+.submit .btn{
+
+  width: 250px;
+  height: 50px;
+  font-size: 30px;
+}
+
+
+
+
+}
   
