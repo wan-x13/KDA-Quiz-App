@@ -50,29 +50,9 @@ const isEmailValid = (email) =>{
 
 }
 
-const setShowSuccess=(field)=>{
-
-    let containerField = field.parentElement;
-    containerField.classList.add('success');
-    containerField.classList.remove('invalid');
-    msg.textContent = message;
 
 
-}
-
-const setShowError =  (field, message)=>{
-
-    
-  let containerField = field.parentElement;
-    
-    containerField.classList.add('invalid');
-    containerField.classList.remove('success');
-
-    msg.textContent = message;
-
-
-}
-
+  
 
 
 
@@ -226,8 +206,7 @@ function nextQuestion(){
  
  }
  else{
-
-  successParty.style.display = "flex"
+  successParty.style.display = "flex";
   getResult();
  }
   
