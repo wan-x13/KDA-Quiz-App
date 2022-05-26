@@ -116,6 +116,10 @@ top: 30px;
   padding: 10px;
 
 }
+.success{
+
+  border : 1px solid #028A3D;
+}
 
 
 /* partie du questionnaire */
@@ -169,23 +173,32 @@ top: 30px;
   color: #555555;
   font-size: 14px;
 }
-.form-check{
+.container-radio{
 
   margin: 15px 0 ;
   height: 35px;
-  align-content: center;
-}
-.answer{
   padding-top: 5px;
+  padding-left: 10px ;
+  align-content: center;
+  border: 1px solid #DDDDDD;
 }
-.form-check  .answer, label{
+
+.container-radio > label{
   padding-left: 10px; 
 }
+.container-radio:hover{
 
-.form-check:hover{
-
-  border: 1px solid #028A3D;
+  border:#028A3D 1px solid;
 }
+input[type="radio"]:checked{
+
+  appearance: none;
+  border: 7px solid #028A3D;
+  border-radius: 50px;
+}
+
+
+
 label{
 
   font-size: 15px;

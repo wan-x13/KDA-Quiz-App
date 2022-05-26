@@ -10,10 +10,10 @@ let questions = [
         question : "Quel est le type d'un fichier javascript ?" ,
         answer : 4 ,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value='1' id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value='2' id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value='3' id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value='4' id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             ".ts",
@@ -29,10 +29,10 @@ let questions = [
         question : "Quel est le moteur javascript pour google chrome ?" ,
         answer : 3,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value='1' id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value='2' id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value='3' id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value='4' id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             " V12 javascript engine",
@@ -48,10 +48,10 @@ let questions = [
         question : "Comment déclare t-on une fonction ?" ,
         answer : 4,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             "def __init__{...}",
@@ -67,10 +67,10 @@ let questions = [
         question : "Comment déclare t-on une variable ?" ,
         answer :3 ,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             "int idStudent = 3",
@@ -86,10 +86,10 @@ let questions = [
         question : "Comment créer un objet en javascript ?" ,
         answer : 2,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             "int personne  = {...........}",
@@ -105,10 +105,10 @@ let questions = [
         question : " Laquelle de librairie suivante n'est pas du javascript" ,
         answer :4 ,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             "Vuejs",
@@ -124,10 +124,10 @@ let questions = [
         question : "Parmi les avantages de javascript suivant suivant l'un est faux " ,
         answer : 3,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             "Javascript est un langage coté client",
@@ -143,10 +143,10 @@ let questions = [
         question : "Qu'est ce que le DOM ?" ,
         answer : 4,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             "département d'outre mer",
@@ -162,10 +162,10 @@ let questions = [
         question : "A quoi sert le mot clé this ? " ,
         answer : 4 ,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
         ],
         options : [
             "le mot-clé « this » fait réference à la fonction",
@@ -181,10 +181,11 @@ let questions = [
         question : "Comment trouvez-vous le nombre avec la plus grande valeur de « a » et « b » ?" ,
         answer : 2,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
+        
         ],
         options : [
             "Math.ceil(a, b)",
@@ -201,10 +202,11 @@ let questions = [
         question : "Comment arrondir le nombre 3.12 à un nombre entier plus proche ?" ,
         answer :1 ,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
+        
         ],
         options : [
             "Math.round(3.12)",
@@ -220,10 +222,11 @@ let questions = [
         question : "Quelle est la syntaxe correcte de la boucle while?" ,
         answer : 4 ,
         idInput : [
-            "<input type='radio' name='reponse' class='form-check-input' value=1 id='response1'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=2 id='response2'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=3 id='response3'>",
-            "<input type='radio' name='reponse' class='form-check-input' value=4 id='response4'>",
+            "<input type='radio' class='valeur' name='reponse' value='1' id='response1'>",
+            "<input type='radio' class='valeur' name='reponse' value='2' id='response2'>",
+            "<input type='radio' class='valeur' name='reponse' value ='3' id='response3'>",
+            "<input type='radio' class='valeur' name='reponse' value='4' id='response4'>",
+        
         ],
         options : [
             "while i = 1 to 5;",

@@ -4,7 +4,7 @@ const startQuiz = document.querySelector("#start");
 const quizInfo = document.querySelector("#quiz");
 const successParty = document.querySelector("#successParty");
 const nextButton = document.querySelector('#next');
-const nameInput = document.querySelector("#Name");
+
 const emailInput = document.querySelector("#email");
 const questionZone = document.querySelector("#questions");
 const checkAnswer = document.querySelector("#checkAnswer");
@@ -26,101 +26,70 @@ let userScore = 0;
 let counterTime ;
 let idProgress;
 
-let numberPerQuestionSucced = 0;
-
-
-
+let numberPerQuestionSucced = 0
 let userName;
 let emailUser;
 
 
 const forms = document.querySelector(".needs-validation");
-const fields = document.querySelectorAll("input[name='Name'], input[name='email']");
+const fields = document.querySelectorAll("input[name='username'], input[name='email']");
+const msg = document.querySelectorAll(".containt > .msg");
+
+const username = document.querySelector("input[name ='username'");
+const email = document.querySelector("INPUT[name='email'");
 
 
+// function validation
+const isRequired = value => value === '' ? false : true;
+const isLength =  (length, min, max) => length < min || length >max ? false : true;
 
-forms.addEventListener("submit", function(event){
+const isEmailValid = (email) =>{
+  let format =  /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/; 
+     
+  return format.test(email);
 
-  event.preventDefault();
-  let valid = false;
-  const msg = document.querySelectorAll(".containt > .msg");
-  console.log(msg);
+}
 
- fields.forEach((field) => {
-  
- if(field.value.trim() === ""){
+const setShowSuccess=(field)=>{
 
-    field.classList.add('invalid'); 
-    field.nextElementSibling.textContent = 'Veuillez remplir ce champs';
-  }
-  else if(field.type == "email"){
+    let containerField = field.parentElement;
+    containerField.classList.add('success');
+    containerField.classList.remove('invalid');
+    msg.textContent = message;
 
-    let format =  /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/; 
 
-    if(!field.value.match(format)){
+}
 
-     valid = false;
-    }
-    else{
+const setShowError =  (field, message)=>{
 
-      valid =  true;
- 
-    }
-    if(valid == true){
-
-    userName = nameInput.value;
-    console.log(userName);
-    emailUser = emailInput.value;
-    console.log(emailUser);
-    getQuestions(0);
-    setTime(timeValue);
-    displayStart.style.display = "none";
-    quizInfo.style.display = "flex";
     
-    nextButton.disabled = true;
-    }
-  }
- 
-});
+  let containerField = field.parentElement;
+    
+    containerField.classList.add('invalid');
+    containerField.classList.remove('success');
+
+    msg.textContent = message;
 
 
-})
+}
 
 
-nextButton.addEventListener('click', function(){
-   nextQuestion();
- 
-});
 
-homePageButton.addEventListener('click' , function(){
-
-  window.location.reload();
-  
-
-});
-
-exitButton.addEventListener('click', function(){
-
-  
-successParty.style.display = "flex";
-getResult();
-
-})
 
 function getQuestions(index){
 
     let questionTag = questions[index].question ;
-    let optionTag  = '<div class= "form-check border rounded"><div class="answer">'+questions[index].idInput[0] + '<label for="response1" class="form-check-label">' 
-    + questions[index].options[0] +'</label></div></div>'
+    let optionTag  = '<div class= "container-radio ">'+questions[index].idInput[0] + '<label for="response1" >' 
+    + questions[index].options[0] +'</label></div>'
 
-    +'<div class="form-check border  rounded"><div class="answer">'+questions[index].idInput[1] + '<label for="response2" class="form-check-label">' 
-    + questions[index].options[1] +'</label></div></div>'
+    +'<div class=" container-radio  ">'+questions[index].idInput[1] + '<label for="response2" >' 
+    + questions[index].options[1] +'</label></div>'
 
-    +'<div class="form-check border  rounded"><div class="answer">'+questions[index].idInput[2] + '<label for="response3" class="form-check-label">' 
-    + questions[index].options[2] +'</label></div></div>'
+    +'<div class=" container-radio  ">'+questions[index].idInput[2] + '<label for="response3" >' 
+    + questions[index].options[2] +'</label></div>'
 
-    +'<div class="form-check border  rounded"><div class="answer">'+questions[index].idInput[3] + '<label for="response4" class="form-check-label">' 
-    + questions[index].options[3] +'</label></div></div>';
+    +'<div class=" container-radio ">'+questions[index].idInput[3] + '<label for="response4" >' 
+    + questions[index].options[3] +'</label></div>';
     questionZone.innerHTML = questionTag;
     checkAnswer.innerHTML = optionTag;
 
@@ -141,14 +110,20 @@ function getOption(answer){
    
  
     let correctAnswer = questions[countQuestion].answer;
-    const allOptions = checkAnswer.querySelectorAll(".form-check .answer > input , label");
-    const allInputs = checkAnswer.querySelectorAll(".form-check .answer > input[name='reponse'] ");
+    const allOptions = checkAnswer.querySelectorAll(".container-radio> input , label");
+  
+    const allInputs = checkAnswer.querySelectorAll(".container-radio > input[name='reponse'] ");
+
+    
 
     for(const element of allInputs){
 
         if(element.checked){
 
+
             userAnswer = element.value;
+         
+            element.style.backgroundColor = "#028A3D";
       
             break;
         }
@@ -174,14 +149,14 @@ function setTime(time){
 
     countQuestion ;
 
-    const allOptions = checkAnswer.querySelectorAll(".form-check .answer > input , label");
+    const allOptions = checkAnswer.querySelectorAll(".container-radio> input , label");
+
 
     counterTime = setInterval(()=>{
 
     timeCount.innerText = time;
     time--;
     let progressWith = time/60 *100;
-
 
     if( time > 0){
 
@@ -196,15 +171,10 @@ function setTime(time){
         timeCount.innerText = "Time off";
         timeCount.style.color = "red";
         progress.style.width = "0%";
-
-        nextQuestion();
-         
+        nextQuestion();   
     }
-  
-    
    }, 1000)
 }
-
 
 function getResult(){
 
@@ -262,3 +232,7 @@ function nextQuestion(){
  }
   
 }
+
+// fonction de validation du formulaire
+
+
