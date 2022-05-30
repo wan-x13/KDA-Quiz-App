@@ -19,8 +19,8 @@ forms.addEventListener('submit', function(event){
     }
     else{
 
-       field.classList.add("success");
-    }
+      //  field.classList.add("success");
+
 
     if(field.type == "email"){
 
@@ -46,6 +46,8 @@ forms.addEventListener('submit', function(event){
 
        
      }
+    }
+
 
 
          

@@ -134,7 +134,7 @@ function setTime(time){
 
     counterTime = setInterval(()=>{
 
-    timeCount.innerText = time;
+    timeCount.textContent = time;
     time--;
     let progressWith = time/60 *100;
 
@@ -147,7 +147,9 @@ function setTime(time){
 
         timeCount.innerText = "0" + time;
     }    
-    if(time <= 0){
+    if(time == 0){
+
+      clearInterval(counterTime);
         timeCount.innerText = "Time off";
         timeCount.style.color = "red";
         progress.style.width = "0%";
