@@ -8,10 +8,7 @@ forms.addEventListener('submit', function(event){
   fields.forEach((field)=>{
 
     
-    //   else{
-   
-        
-    //   }
+ 
     if(field.value.trim() === ''){
 
       field.classList.add("invalid");
@@ -19,7 +16,7 @@ forms.addEventListener('submit', function(event){
     }
     else{
 
-      //  field.classList.add("success");
+
 
 
     if(field.type == "email"){

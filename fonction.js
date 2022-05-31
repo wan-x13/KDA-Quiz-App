@@ -18,7 +18,6 @@ const countPageSucced = document.querySelector(".count_page_succed");
 const progress = document.querySelector("#progressBar");
 
 
-// Input values 
 let timeValue = 60;
 let countQuestion = 0;
 let questionNumber = 1;
@@ -39,7 +38,6 @@ const username = document.querySelector("input[name ='username'");
 const email = document.querySelector("INPUT[name='email'");
 
 
-// function validation
 const isRequired = value => value === '' ? false : true;
 const isLength =  (length, min, max) => length < min || length >max ? false : true;
 
@@ -85,8 +83,6 @@ function getQuestions(index){
 
 function getOption(answer){
 
-
-    // Récuperation de la reponse de l'utilisateur
    
  
     let correctAnswer = questions[countQuestion].answer;
@@ -117,13 +113,13 @@ function getOption(answer){
  
     }
     
-  //  for(let i = 0; i<allOptions.length; i++) allOptions[i].disabled = true;
+
     
     nextButton.disabled = false;
 
 }
 
-// setTime function
+
 
 function setTime(time){
 
@@ -183,7 +179,7 @@ function getResult(){
 
 }
 
-// function question compteur
+
 
 function setQuestionCounter(index){
 
@@ -214,6 +210,6 @@ function nextQuestion(){
   
 }
 
-// fonction de validation du formulaire
+
 
 
