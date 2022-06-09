@@ -63,6 +63,9 @@ display: none;
 
    
   }
+  .presentation{
+
+  }
 
 .containt, .title {
 
@@ -78,7 +81,7 @@ display: none;
 .submit{
 text-align: center;
 position: relative;
-top: 30px;
+/* top: 30px; */
 
 }
 .submit .btn{
@@ -92,6 +95,7 @@ top: 30px;
   font-size: 30px;
   margin-top: 20px;
 
+
 }
 
 .breifing{
@@ -102,8 +106,14 @@ top: 30px;
   color:#555555 ;
   line-height: 20px;
   font-family: 'Inter';
+  margin-top: 20px;
+
  
 
+}
+.containt{
+
+ 
 }
 
 .containt > .invalid{
@@ -187,10 +197,7 @@ top: 30px;
 .container-radio > label{
   padding-left: 10px; 
 }
-.container-radio:hover{
 
-  border:#028A3D 1px solid;
-}
 input[type="radio"]:checked{
 
   appearance: none;

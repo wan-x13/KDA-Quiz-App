@@ -7,17 +7,12 @@ forms.addEventListener('submit', function(event){
 
   fields.forEach((field)=>{
 
-    
- 
     if(field.value.trim() === ''){
 
       field.classList.add("invalid");
       field.nextElementSibling.innerText = "veuillez remplir ce champs"; 
     }
     else{
-
-
-
 
     if(field.type == "email"){
 
@@ -44,13 +39,6 @@ forms.addEventListener('submit', function(event){
        
      }
     }
-
-
-
-         
-
-      
-
   })
   
 })
@@ -61,6 +49,15 @@ forms.addEventListener('submit', function(event){
 nextButton.addEventListener('click', function(){
 
   nextQuestion();
+   if(countQuestion == questions.length-1){
+    nextButton.textContent = "terminer";
+    this.addEventListener('click', function(e){
+      e.stopPropagation();
+      successParty.style.display = "flex" ;
+      getResult();
+    });
+   
+   }
 
 });
 
@@ -72,7 +69,6 @@ homePageButton.addEventListener('click' , function(){
 });
 
 exitButton.addEventListener('click', function(){
-
 
   successParty.style.display = "flex";
   getResult();

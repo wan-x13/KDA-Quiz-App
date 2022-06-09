@@ -100,6 +100,9 @@ function getOption(answer){
             userAnswer = element.value;
          
             element.style.backgroundColor = "#028A3D";
+   
+          
+            element.parentNode.style.border = "#028A3D 1px solid";
       
             break;
         }
@@ -152,6 +155,8 @@ function setTime(time){
         nextQuestion();   
     }
    }, 1000)
+
+
 }
 
 function getResult(){
@@ -203,11 +208,36 @@ function nextQuestion(){
     nextButton.disabled = true;
  
  }
- else{
-  successParty.style.display = "flex";
-  getResult();
- }
+
+
   
+}
+
+/**
+ * 
+ * @param {DOMElement} element 
+ */
+function toggleborder(element){
+  if(element.parentNode.nextSibling || element.parentNode.previousSibling){
+    element.parentNode.style.removeAttribute('border');
+  }
+  return toggle(element.parentNode);
+}
+
+const isValidate = function(){
+  fields.forEach(field => {
+     if(isRequired(field)){
+      field.classList.add("invalid");
+      field.nextElementSibling.innerText = "veuillez remplir ce champs"; 
+
+      return false;
+    }
+    if(isLength(field)){
+      
+    }
+  })
+  return true;
+
 }
 
 
